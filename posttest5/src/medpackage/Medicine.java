@@ -1,11 +1,11 @@
 package medpackage;
 
 public abstract class Medicine {
-    private String id;
-    private String name;
-    private int stok;
-    private int price;
-    private String date_input;
+    protected String id;
+    protected String name;
+    protected int stok;
+    protected int price;
+    protected String date_input;
 
     public Medicine(String id, String name, int stok, int price, String date) {
         this.id = id;
@@ -15,34 +15,24 @@ public abstract class Medicine {
         this.date_input = date;
     }
 
-    public Medicine() {
-        this.id = "";
+    public Medicine(){
+
     }
 
-    public String getId() {
-        return id;
-    }
+    public abstract String getId();
 
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
-    public int getStok() {
-        return stok;
-    }
+    public abstract int getStok();
 
-    public int getPrice() {
-        return price;
-    }
+    public abstract int getPrice();
 
-    public String getDate() {
-        return date_input;
-    }
+    public abstract String getDate();
 
     public void display() {
         System.out.printf("|%-8s", this.getId());
         System.out.printf("|%-22s", this.getName());
-        System.out.printf("|%-13s", "Rp." + this.getPrice());
+        System.out.printf("|%-13s", "Rp."+this.getPrice());
         System.out.printf("|%-10s", this.getStok());
     }
 }

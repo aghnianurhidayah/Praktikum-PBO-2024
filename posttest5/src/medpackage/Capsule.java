@@ -10,6 +10,26 @@ public class Capsule extends Medicine {
         this.mg = mg;
     }
 
+    public String getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getStok(){
+        return stok;
+    }
+
+    public int getPrice(){
+        return price;
+    }
+
+    public String getDate(){
+        return date_input;
+    }
+
     public String getType() {
         return type;
     }
